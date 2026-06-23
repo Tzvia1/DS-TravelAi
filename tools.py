@@ -8,7 +8,7 @@ from math import radians, sin, cos, asin, sqrt
 
 import requests
 
-from contracts import Place, INTERESTS
+from models.contracts import Place, INTERESTS
 
 HEADERS = {"User-Agent": "walking-tour-agent/0.1 (student project)"}
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
