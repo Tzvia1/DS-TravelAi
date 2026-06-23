@@ -6,7 +6,7 @@ are free community servers without an SLA.
 import requests
 import pytest
 
-from contracts import INTERESTS
+from models.contracts import INTERESTS
 from tools import geocode, get_nearby_places, order_walking_route
 
 SCENARIOS = [

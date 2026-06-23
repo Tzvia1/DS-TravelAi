@@ -2,7 +2,7 @@
 
 Scope: `get_nearby_places`, `order_walking_route`, and `validate_request` — the
 data layer that turns an address + interest buttons into real, ordered places.
-(See [Guide_Tzvia_Tools_Data.md](Guide_Tzvia_Tools_Data.md) for the full spec.)
+(See [docs/Guide_Tzvia_Tools_Data.md](docs/Guide_Tzvia_Tools_Data.md) for the full spec.)
 The overall project README/docs/deck belong to Efrat; this file only covers
 running and testing my part.
 
@@ -10,9 +10,9 @@ running and testing my part.
 
 | File | Purpose |
 |---|---|
-| `contracts.py` | Frozen `Place` schema + `INTERESTS` (Chavi owns this for real; bootstrapped here so I'm not blocked) |
+| `models/contracts.py` | Frozen `Place` schema + `INTERESTS` (Chavi owns this for real; bootstrapped here so I'm not blocked) |
 | `tools.py` | `geocode`, `get_nearby_places`, `order_walking_route`, `validate_request` |
-| `tests/conftest.py` | Lets tests import root-level `tools.py`/`contracts.py` |
+| `tests/conftest.py` | Lets tests import root-level `tools.py` and the `models` package |
 | `tests/test_tools_unit.py` | Fast, offline tests (pure logic, no network) |
 | `tests/test_tools_live.py` | Hits the real Nominatim/Overpass APIs; skips gracefully if unreachable |
 | `tests/manual_scenarios.py` | Prints the 3 demo scenarios for eyeballing real venue names |
@@ -58,5 +58,5 @@ source gap, not a bug; `test_order_walking_route_preserves_the_same_places`
 skips per-scenario if a category genuinely returns nothing.
 
 ## Handoff
-- **To Chavi:** both tools return `list[Place]` exactly per `contracts.py`. Geocoding failures raise `ValueError`; empty results return `[]`.
+- **To Chavi:** both tools return `list[Place]` exactly per `models/contracts.py`. Geocoding failures raise `ValueError`; empty results return `[]`.
 - **To Efrat:** every `Place` has `lat`/`lon` for the map. Call `validate_request()` before invoking the agent.

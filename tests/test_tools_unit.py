@@ -1,7 +1,7 @@
 """Fast, offline tests — no network calls. Run with: pytest tests/test_tools_unit.py"""
 import pytest
 
-from contracts import Place
+from models.contracts import Place
 from tools import (
     _build_overpass_query,
     _which_interest,
