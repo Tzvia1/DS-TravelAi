@@ -4,6 +4,7 @@ Data source: OpenStreetMap — Nominatim (geocoding) + Overpass (nearby places).
 Both are free, keyless community servers; we send a descriptive User-Agent
 and keep queries minimal per their usage etiquette.
 """
+from functools import lru_cache
 from math import radians, sin, cos, asin, sqrt
 
 import requests
@@ -12,7 +13,13 @@ from models.contracts import Place, INTERESTS
 
 HEADERS = {"User-Agent": "walking-tour-agent/0.1 (student project)"}
 NOMINATIM = "https://nominatim.openstreetmap.org/search"
-OVERPASS = "https://overpass-api.de/api/interpreter"
+# Overpass is the slow part. We try a commonly-faster mirror first and fall
+# back to the main server, so a slow/overloaded endpoint doesn't stall a build.
+# Reorder this list if a mirror misbehaves.
+OVERPASS_ENDPOINTS = [
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass-api.de/api/interpreter",
+]
 
 # Each interest -> a list of OSM (key, value) filters to search for.
 CATEGORY_OSM = {
@@ -27,8 +34,12 @@ CATEGORY_OSM = {
 }
 
 
+@lru_cache(maxsize=256)
 def geocode(address):
-    """Address -> (lat, lon). Raises ValueError if not found."""
+    """Address -> (lat, lon). Raises ValueError if not found.
+
+    Cached: the same address geocodes instantly on repeat builds / refines.
+    """
     r = requests.get(NOMINATIM,
                       params={"q": address, "format": "json", "limit": 1},
                       headers=HEADERS, timeout=10)
@@ -61,14 +72,26 @@ def _which_interest(tags, interests):
     return interests[0] if interests else "history"
 
 
+def _query_overpass(query):
+    """POST the query to the first Overpass endpoint that answers."""
+    last_err = None
+    for url in OVERPASS_ENDPOINTS:
+        try:
+            r = requests.post(url, data={"data": query}, headers=HEADERS, timeout=25)
+            r.raise_for_status()
+            return r.json()
+        except requests.exceptions.RequestException as e:
+            last_err = e  # endpoint slow/down — try the next one
+    raise last_err
+
+
 def get_nearby_places(location, interests, radius_m=800, limit=12):
     lat, lon = geocode(location)
     query = _build_overpass_query(lat, lon, interests, radius_m)
-    r = requests.post(OVERPASS, data={"data": query}, headers=HEADERS, timeout=30)
-    r.raise_for_status()
+    data = _query_overpass(query)
 
     places = []
-    for el in r.json().get("elements", []):
+    for el in data.get("elements", []):
         tags = el.get("tags", {})
         name = tags.get("name")
         if not name:
