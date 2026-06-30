@@ -31,6 +31,15 @@ CATEGORY_OSM = {
     "cafe":         [("amenity", "cafe")],
     "museum":       [("tourism", "museum")],
     "nature":       [("leisure", "park"), ("leisure", "garden")],
+    "beach":        [("natural", "beach")],
+    "bar":          [("amenity", "bar"), ("amenity", "pub")],
+    "theater":      [("amenity", "theatre")],
+    "viewpoint":    [("tourism", "viewpoint")],
+    "market":       [("amenity", "marketplace")],
+    "cinema":       [("amenity", "cinema")],
+    "religion":     [("amenity", "place_of_worship")],
+    "kids":         [("leisure", "playground"), ("tourism", "zoo"),
+                     ("tourism", "theme_park"), ("tourism", "aquarium")],
 }
 
 

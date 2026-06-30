@@ -1,0 +1,418 @@
+2026-06-28 15:55:02,174 INFO Duration 90 min -> target 4 stops
+2026-06-28 15:55:04,268 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:55:04,269 INFO Retrying request to /chat/completions in 0.393577 seconds
+2026-06-28 15:55:04,998 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:55:04,998 INFO Retrying request to /chat/completions in 0.777215 seconds
+2026-06-28 15:55:06,115 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:55:06,118 ERROR LLM call failed (auth/quota/rate-limit/connection)
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 125, in run_agent
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-06-28 15:55:35,545 INFO Duration 90 min -> target 4 stops
+2026-06-28 15:55:35,820 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:55:35,821 INFO Retrying request to /chat/completions in 0.408937 seconds
+2026-06-28 15:55:36,408 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:55:36,409 INFO Retrying request to /chat/completions in 0.988536 seconds
+2026-06-28 15:55:37,581 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 15:55:37,583 ERROR LLM call failed (auth/quota/rate-limit/connection)
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 125, in run_agent
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-06-28 16:03:37,419 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:03:39,314 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:03:39,316 INFO Retrying request to /chat/completions in 0.431432 seconds
+2026-06-28 16:03:40,089 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:03:40,090 INFO Retrying request to /chat/completions in 0.931902 seconds
+2026-06-28 16:03:41,323 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:03:41,329 ERROR LLM call failed (auth/quota/rate-limit/connection)
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 125, in run_agent
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-06-28 16:17:14,212 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:17:15,939 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:17:15,940 INFO Retrying request to /chat/completions in 0.447940 seconds
+2026-06-28 16:17:16,718 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:17:16,719 INFO Retrying request to /chat/completions in 0.836895 seconds
+2026-06-28 16:17:17,868 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:17:17,870 ERROR LLM call failed (auth/quota/rate-limit/connection)
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 125, in run_agent
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-06-28 16:23:08,688 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:23:09,169 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:23:09,170 INFO Retrying request to /chat/completions in 0.425924 seconds
+2026-06-28 16:23:09,783 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:23:09,784 INFO Retrying request to /chat/completions in 0.794050 seconds
+2026-06-28 16:23:10,932 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:23:10,934 ERROR LLM call failed (auth/quota/rate-limit/connection)
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 125, in run_agent
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-06-28 16:23:14,043 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:23:14,218 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:23:14,219 INFO Retrying request to /chat/completions in 0.451588 seconds
+2026-06-28 16:23:14,859 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:23:14,861 INFO Retrying request to /chat/completions in 0.762604 seconds
+2026-06-28 16:23:15,809 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-06-28 16:23:15,810 ERROR LLM call failed (auth/quota/rate-limit/connection)
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 125, in run_agent
+    resp = client.chat.completions.create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/resources/chat/completions/completions.py", line 1251, in create
+    return self._post(
+           ^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1332, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/openai/_base_client.py", line 1105, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.RateLimitError: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}
+2026-06-28 16:24:14,887 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:24:17,410 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:24:17,423 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['food']}
+2026-06-28 16:25:40,610 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:26:21,231 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:26:22,798 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:26:22,801 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['food']}
+2026-06-28 16:26:25,861 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:26:25,863 INFO TOOL CALL order_walking_route args={'places': [{'name': 'Matteo', 'category': 'food', 'lat': 32.0743704, 'lon': 34.7749665}, {'name': 'יתבתה בעיר', 'category': 'food', 'lat': 32.075906, 'lon': 34.7661399}, {'name': 'Bezzo Pizza', 'category': 'food', 'lat': 32.070591, 'lon': 34.765087}]}
+2026-06-28 16:26:29,291 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:26:29,302 INFO Final answer after 2 round(s).
+2026-06-28 16:28:47,711 INFO Duration 60 min -> target 3 stops
+2026-06-28 16:28:49,173 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:28:49,200 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['architecture', 'history']}
+2026-06-28 16:28:52,913 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:28:52,929 INFO TOOL CALL order_walking_route args={'places': [{'name': 'קורסבן השואה ההולocaust memorial', 'category': 'history', 'lat': 32.0728947, 'lon': 34.772568, 'blurb': ''}, {'name': 'אנדרטת האלטלנה', 'category': 'history', 'lat': 32.0787188, 'lon': 34.7667565, 'blurb': ''}, {'name': 'הפצצה האיטלקית על תל אביב', 'category': 'history', 'lat': 32.0740284, 'lon': 34.7758674, 'blurb': 'The Italian bombing of Tel Aviv in World War II was under an excuse to strike at the United Kingdom. However, targeting Tel Aviv killed over 130 uninvolved civilians.'}]}
+2026-06-28 16:28:56,185 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 16:28:56,194 INFO Final answer after 2 round(s).
+2026-06-28 17:08:35,767 INFO Duration 60 min -> target 3 stops
+2026-06-28 17:08:38,443 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:08:38,446 INFO TOOL CALL get_nearby_places args={'location': 'Smuel Hanagid 12, Herzliya', 'interests': ['architecture', 'history']}
+2026-06-28 17:08:38,847 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Smuel Hanagid 12, Herzliya'
+2026-06-28 17:08:39,698 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:08:39,710 INFO TOOL CALL get_nearby_places args={'location': 'Herzliya', 'interests': ['architecture', 'history']}
+2026-06-28 17:08:44,577 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:08:44,601 INFO TOOL CALL order_walking_route args={'places': [{'name': 'Soldiers Memorial', 'category': 'history', 'lat': 32.1677735, 'lon': 34.8516024, 'blurb': ''}, {'name': 'Victims of terrorism', 'category': 'history', 'lat': 32.1623637, 'lon': 34.8430517, 'blurb': 'A wavy memorial with names. Space was depressingly left for future victims.'}, {'name': 'מוזיאון הרצליה לאומניות עכשוויות', 'category': 'architecture', 'lat': 32.1619921, 'lon': 34.8442421, 'blurb': ''}, {'name': 'המרכז הרפואי ע״ש חיים שיבא', 'category': 'architecture', 'lat': 32.1658941, 'lon': 34.8413922, 'blurb': ''}, {'name': 'בית המשפט השלום בהרצליה', 'category': 'architecture', 'lat': 32.1656475, 'lon': 34.8494046, 'blurb': ''}]}
+2026-06-28 17:08:48,383 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:08:48,388 INFO Final answer after 3 round(s).
+2026-06-28 17:09:32,698 INFO Duration 150 min -> target 6 stops
+2026-06-28 17:09:33,868 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:09:33,870 INFO TOOL CALL get_nearby_places args={'location': 'Smuel Hanagid 12, Herzliya', 'interests': ['architecture', 'history']}
+2026-06-28 17:09:34,098 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Smuel Hanagid 12, Herzliya'
+2026-06-28 17:09:35,261 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:09:35,267 INFO TOOL CALL get_nearby_places args={'location': 'Herzliya', 'interests': ['architecture', 'history']}
+2026-06-28 17:09:41,957 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:09:41,958 INFO TOOL CALL order_walking_route args={'places': [{'name': 'Soldiers Memorial', 'category': 'history', 'lat': 32.1677735, 'lon': 34.8516024, 'blurb': ''}, {'name': 'Derech Yonatan', 'category': 'history', 'lat': 32.1655601, 'lon': 34.8498436, 'blurb': ''}, {'name': 'Victims of terrorism', 'category': 'history', 'lat': 32.1623637, 'lon': 34.8430517, 'blurb': 'A wavy memorial with names. Space was depressingly left for future victims.'}, {'name': 'מוזיאון הרצליה לאמנות', 'category': 'architecture', 'lat': 32.1619921, 'lon': 34.8442421, 'blurb': ''}, {'name': 'מרכז דניאל', 'category': 'architecture', 'lat': 32.1658941, 'lon': 34.8413922, 'blurb': ''}, {'name': 'מוזיאון הרצליה לאמנות', 'category': 'architecture', 'lat': 32.1687131, 'lon': 34.8406621, 'blurb': ''}]}
+2026-06-28 17:09:48,671 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:09:48,675 INFO Final answer after 3 round(s).
+2026-06-28 17:14:44,323 INFO Duration 60 min -> target 3 stops
+2026-06-28 17:14:46,181 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:14:46,195 INFO TOOL CALL get_nearby_places args={'location': 'Nafcha 11 Beit Shemesh', 'interests': ['art']}
+2026-06-28 17:14:46,766 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Nafcha 11 Beit Shemesh'
+2026-06-28 17:14:48,018 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:14:48,025 INFO Final answer after 1 round(s).
+2026-06-28 17:14:55,996 INFO Duration 150 min -> target 6 stops
+2026-06-28 17:14:57,000 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:14:57,002 INFO TOOL CALL get_nearby_places args={'location': 'Nafcha 11 Beit Shemesh', 'interests': ['art']}
+2026-06-28 17:14:57,239 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Nafcha 11 Beit Shemesh'
+2026-06-28 17:14:58,333 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:14:58,336 INFO Final answer after 1 round(s).
+2026-06-28 17:16:03,724 INFO Duration 150 min -> target 6 stops
+2026-06-28 17:16:04,874 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:04,877 INFO TOOL CALL get_nearby_places args={'location': 'Harav Ketroni 42 Petach Tikva', 'interests': ['art']}
+2026-06-28 17:16:05,190 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Harav Ketroni 42 Petach Tikva'
+2026-06-28 17:16:06,323 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:06,334 INFO Final answer after 1 round(s).
+2026-06-28 17:16:19,174 INFO Duration 150 min -> target 6 stops
+2026-06-28 17:16:20,624 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:20,626 INFO TOOL CALL get_nearby_places args={'location': 'Harav Katroni 42 Petach Tikva', 'interests': ['art']}
+2026-06-28 17:16:21,398 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Harav Katroni 42 Petach Tikva'
+2026-06-28 17:16:22,375 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:22,389 INFO Final answer after 1 round(s).
+2026-06-28 17:16:28,587 INFO Duration 150 min -> target 6 stops
+2026-06-28 17:16:29,561 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:29,566 INFO TOOL CALL get_nearby_places args={'location': 'Harav Katroni 42 Petah Tikva', 'interests': ['art']}
+2026-06-28 17:16:29,887 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Harav Katroni 42 Petah Tikva'
+2026-06-28 17:16:30,797 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:30,801 INFO TOOL CALL get_nearby_places args={'location': 'Petah Tikva', 'interests': ['art']}
+2026-06-28 17:16:35,913 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:35,915 INFO TOOL CALL order_walking_route args={'places': [{'name': 'הציפור החחולה', 'category': 'art', 'lat': 32.086933, 'lon': 34.8819811}]}
+2026-06-28 17:16:37,794 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:37,799 INFO Final answer after 3 round(s).
+2026-06-28 17:16:56,282 INFO Duration 150 min -> target 6 stops
+2026-06-28 17:16:57,489 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:57,505 INFO TOOL CALL get_nearby_places args={'location': 'Harav Katroni 42 Petah Tikva', 'interests': ['art', 'cafe', 'food']}
+2026-06-28 17:16:57,739 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Harav Katroni 42 Petah Tikva'
+2026-06-28 17:16:58,566 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:16:58,572 INFO TOOL CALL get_nearby_places args={'location': 'Petah Tikva', 'interests': ['art', 'cafe', 'food']}
+2026-06-28 17:17:03,711 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:17:03,720 INFO TOOL CALL order_walking_route args={'places': [{'name': 'הציפורה החחולה', 'category': 'art', 'lat': 32.086933, 'lon': 34.8819811, 'blurb': ''}, {'name': 'נוסטלגיה', 'category': 'cafe', 'lat': 32.0945994, 'lon': 34.8871274, 'blurb': ''}, {'name': 'בורגרס בר פתח תקווה', 'category': 'food', 'lat': 32.085028, 'lon': 34.8825685, 'blurb': ''}, {'name': "ל'ה קרנה", 'category': 'food', 'lat': 32.0900768, 'lon': 34.8861551, 'blurb': ''}, {'name': 'קופי דואט', 'category': 'cafe', 'lat': 32.0879534, 'lon': 34.8874332, 'blurb': ''}, {'name': 'סובה', 'category': 'food', 'lat': 32.0931201, 'lon': 34.8858311, 'blurb': ''}]}
+2026-06-28 17:17:10,754 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 17:17:10,761 INFO Final answer after 3 round(s).
+2026-06-28 18:24:33,148 INFO Duration 150 min -> target 6 stops
+2026-06-28 18:24:35,301 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:24:35,309 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-28 18:24:48,777 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:24:48,785 INFO TOOL CALL order_walking_route args={'places': [{'name': 'קקאוו', 'category': 'cafe', 'lat': 32.0639619, 'lon': 34.7738712, 'narration': 'Start your tour at קקאוו, a cozy cafe perfect for a morning coffee.'}, {'name': 'בנדיקט רוטשילד', 'category': 'cafe', 'lat': 32.0636238, 'lon': 34.7727479, 'narration': 'Next, head to בנדיקט רוטשילד for a delightful brunch with a vibrant atmosphere.'}, {'name': 'Jimmy Who', 'category': 'music', 'lat': 32.062925, 'lon': 34.771974, 'narration': 'Stop by Jimmy Who, a lively spot known for its great live music and fun vibe.'}, {'name': 'גלריה שוש ליאון', 'category': 'art', 'lat': 32.0674059, 'lon': 34.7725798, 'narration': 'Visit גלריה שוש ליאון to appreciate some local art and creativity.'}, {'name': 'Neroli', 'category': 'cafe', 'lat': 32.061928, 'lon': 34.767329, 'narration': 'Take a break at Neroli, a charming cafe with a lovely outdoor seating area.'}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'narration': 'Finally, unwind at Hotel & Cafe 65, where you can enjoy a sweet treat to end your tour.'}]}
+2026-06-28 18:24:48,785 ERROR Tool order_walking_route failed unexpectedly
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 82, in _call_tool
+    objs = [Place(**p) if isinstance(p, dict) else p for p in args["places"]]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 82, in <listcomp>
+    objs = [Place(**p) if isinstance(p, dict) else p for p in args["places"]]
+            ^^^^^^^^^^
+TypeError: Place.__init__() got an unexpected keyword argument 'narration'
+2026-06-28 18:24:49,573 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:24:49,574 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-28 18:25:05,847 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:05,855 INFO TOOL CALL order_walking_route args={'places': [{'name': 'קקאוו', 'category': 'cafe', 'lat': 32.0639619, 'lon': 34.7738712}, {'name': 'בנדיקט רוטשילד', 'category': 'cafe', 'lat': 32.0636238, 'lon': 34.7727479}, {'name': 'Jimmy Who', 'category': 'music', 'lat': 32.062925, 'lon': 34.771974}, {'name': 'גלריה שוש ליאון', 'category': 'art', 'lat': 32.0674059, 'lon': 34.7725798}, {'name': 'Neroli', 'category': 'cafe', 'lat': 32.061928, 'lon': 34.767329}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181}]}
+2026-06-28 18:25:11,260 INFO Duration 60 min -> target 3 stops
+2026-06-28 18:25:12,888 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:12,898 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-28 18:25:13,168 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:13,169 INFO Final answer after 4 round(s).
+2026-06-28 18:25:16,754 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:16,761 INFO TOOL CALL order_walking_route args={'places': [{'name': 'Jimmy Who', 'category': 'music', 'lat': 32.062925, 'lon': 34.771974, 'narration': ''}, {'name': '\x1e\x1e\x1e\x01e\x01e\x01e', 'category': 'cafe', 'lat': 32.0639619, 'lon': 34.7738712, 'narration': ''}, {'name': '\x01e\x01e\x01e\x01e\x01e\x01e', 'category': 'art', 'lat': 32.0674059, 'lon': 34.7725798, 'narration': ''}]}
+2026-06-28 18:25:16,762 ERROR Tool order_walking_route failed unexpectedly
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 82, in _call_tool
+    objs = [Place(**p) if isinstance(p, dict) else p for p in args["places"]]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 82, in <listcomp>
+    objs = [Place(**p) if isinstance(p, dict) else p for p in args["places"]]
+            ^^^^^^^^^^
+TypeError: Place.__init__() got an unexpected keyword argument 'narration'
+2026-06-28 18:25:19,238 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:19,243 INFO TOOL CALL order_walking_route args={'places': [{'name': 'Jimmy Who', 'category': 'music', 'lat': 32.062925, 'lon': 34.771974, 'narration': ''}, {'name': 'קקאוא', 'category': 'cafe', 'lat': 32.0639619, 'lon': 34.7738712, 'narration': ''}, {'name': 'גלריה שוש עכשות', 'category': 'art', 'lat': 32.0674059, 'lon': 34.7725798, 'narration': ''}]}
+2026-06-28 18:25:19,244 ERROR Tool order_walking_route failed unexpectedly
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 82, in _call_tool
+    objs = [Place(**p) if isinstance(p, dict) else p for p in args["places"]]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 82, in <listcomp>
+    objs = [Place(**p) if isinstance(p, dict) else p for p in args["places"]]
+            ^^^^^^^^^^
+TypeError: Place.__init__() got an unexpected keyword argument 'narration'
+2026-06-28 18:25:20,415 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:20,422 INFO Final answer after 3 round(s).
+2026-06-28 18:25:22,256 INFO Duration 60 min -> target 3 stops
+2026-06-28 18:25:23,391 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:25:23,395 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-28 18:29:08,668 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:29:54,912 INFO Duration 60 min -> target 3 stops
+2026-06-28 18:29:55,913 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:29:55,917 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-28 18:30:12,201 ERROR Tool get_nearby_places: network/API failure after retry
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 64, in _with_retry
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 68, in get_nearby_places
+    r.raise_for_status()
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 73, in _call_tool
+    places = _with_retry(tools.get_nearby_places, args["location"], args["interests"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 67, in _with_retry
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 68, in get_nearby_places
+    r.raise_for_status()
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter
+2026-06-28 18:30:13,578 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:30:13,588 INFO Final answer after 1 round(s).
+2026-06-28 18:31:45,724 INFO Duration 60 min -> target 3 stops
+2026-06-28 18:31:46,734 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:31:46,736 INFO TOOL CALL get_nearby_places args={'location': '29 tel aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-28 18:31:59,344 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:31:59,357 INFO TOOL CALL order_walking_route args={'places': [{'name': 'Pasticceria Deidda', 'category': 'cafe', 'lat': 39.2266546, 'lon': 9.1303476, 'blurb': ''}, {'name': 'Loyal', 'category': 'cafe', 'lat': 39.2346105, 'lon': 9.139365, 'blurb': ''}, {'name': 'Snack Bar Pasti Veloci', 'category': 'cafe', 'lat': 39.236054, 'lon': 9.139797, 'blurb': ''}]}
+2026-06-28 18:32:05,862 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-28 18:32:05,869 INFO Final answer after 2 round(s).
+2026-06-29 10:26:17,032 INFO Duration 150 min -> target 6 stops
+2026-06-29 10:26:19,777 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-29 10:26:19,792 INFO TOOL CALL get_nearby_places args={'location': 'Menahem Begin 150, Tel Aviv', 'interests': ['art', 'cafe', 'music']}
+2026-06-29 10:26:25,098 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-29 10:26:25,102 INFO TOOL CALL order_walking_route args={'places': [{'name': 'משוגעת', 'category': 'cafe', 'lat': 32.0723768, 'lon': 34.7821062, 'blurb': ''}, {'name': 'מרכז אריסון לאמנות', 'category': 'art', 'lat': 32.0657741, 'lon': 34.7816521, 'blurb': ''}, {'name': 'Arcaffe', 'category': 'cafe', 'lat': 32.07048, 'lon': 34.7863811, 'blurb': ''}, {'name': 'Dungeon', 'category': 'music', 'lat': 32.070295, 'lon': 34.783726, 'blurb': 'Kink night club. Most visitors are 40+ and come as couples. 2/3 men and no single individuals besides club members allowed to "maintain a gender balance". Mind the dress code and club rules!'}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'קפה אצבעות', 'category': 'cafe', 'lat': 32.0717361, 'lon': 34.7794644, 'blurb': ''}]}
+2026-06-29 10:26:32,205 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-29 10:26:32,210 INFO Final answer after 2 round(s).
+2026-06-30 18:24:56,258 INFO Duration 120 min -> target 6 stops
+2026-06-30 18:24:59,909 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 18:24:59,920 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'history']}
+2026-06-30 18:25:32,004 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 18:25:32,008 INFO TOOL CALL order_walking_route args={'places': [{'name': 'גלריה שוש ליאון', 'category': 'art', 'lat': 32.0674059, 'lon': 34.7725798, 'blurb': ''}, {'name': 'Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'קקאו', 'category': 'cafe', 'lat': 32.0639619, 'lon': 34.7738712, 'blurb': ''}, {'name': 'Neroli', 'category': 'cafe', 'lat': 32.061928, 'lon': 34.767329, 'blurb': ''}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'בנדיקט רוטשילד', 'category': 'cafe', 'lat': 32.0636238, 'lon': 34.7727479, 'blurb': 'Wi-Fi Password:10203040'}]}
+2026-06-30 18:25:51,096 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 18:25:51,103 INFO Final answer after 2 round(s).
+2026-06-30 18:26:52,061 INFO Duration 120 min -> target 6 stops
+2026-06-30 18:26:54,749 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 18:26:54,766 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['art', 'cafe', 'history']}
+2026-06-30 18:27:23,910 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 18:27:23,913 INFO TOOL CALL order_walking_route args={'places': [{'name': 'גלריה שוש ליאון', 'category': 'art', 'lat': 32.0674059, 'lon': 34.7725798, 'blurb': ''}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'Allenby Street', 'category': 'history', 'lat': 32.0639619, 'lon': 34.7738712, 'blurb': ''}, {'name': 'Bauhaus Center', 'category': 'art', 'lat': 32.065853, 'lon': 34.770738, 'blurb': ''}, {'name': 'Tel Aviv Museum of Art', 'category': 'art', 'lat': 32.080099, 'lon': 34.782205, 'blurb': ''}, {'name': 'Neve Tzedek', 'category': 'history', 'lat': 32.060124, 'lon': 34.770882, 'blurb': ''}]}
+2026-06-30 18:27:32,397 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 18:27:32,406 INFO Final answer after 2 round(s).
+2026-06-30 19:10:03,359 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:10:06,408 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:10:06,423 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['cafe', 'kids', 'market']}
+2026-06-30 19:10:37,034 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:10:37,062 INFO TOOL CALL order_walking_route args={'places': [{'name': 'קקאוא', 'category': 'cafe', 'lat': 32.0639619, 'lon': 34.7738712, 'blurb': ''}, {'name': 'בנדיקט רוטשילד', 'category': 'cafe', 'lat': 32.0636238, 'lon': 34.7727479, 'blurb': 'Wi-Fi Password:10203040'}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'Max Brenner', 'category': 'cafe', 'lat': 32.064101, 'lon': 34.7741859, 'blurb': ''}, {'name': 'Neroli', 'category': 'cafe', 'lat': 32.061928, 'lon': 34.767329, 'blurb': ''}, {'name': 'Loveat', 'category': 'cafe', 'lat': 32.0692367, 'lon': 34.7702996, 'blurb': ''}]}
+2026-06-30 19:10:48,601 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:10:48,617 INFO Final answer after 2 round(s).
+2026-06-30 19:11:16,190 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:11:17,673 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:11:17,718 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['cafe', 'kids', 'market']}
+2026-06-30 19:11:33,030 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:11:34,001 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:11:34,003 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['cafe', 'kids', 'market']}
+2026-06-30 19:11:45,220 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:11:45,230 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['kids', 'market']}
+2026-06-30 19:12:01,398 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:12:01,400 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['kids', 'market']}
+2026-06-30 19:12:31,428 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:12:31,434 INFO TOOL CALL order_walking_route args={'places': [{'name': 'שוק קוינסקי', 'category': 'market', 'lat': 32.05964, 'lon': 34.7726296, 'blurb': ''}, {'name': 'Plaine de jeux Rishonim street 10', 'category': 'kids', 'lat': 32.0625554, 'lon': 34.7676054, 'blurb': ''}, {'name': 'שוק הכרמל', 'category': 'market', 'lat': 32.0685509, 'lon': 34.7688024, 'blurb': ''}, {'name': 'נחלת בנימין', 'category': 'market', 'lat': 32.0681548, 'lon': 34.7701742, 'blurb': ''}, {'name': 'Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'שוק הכרמל', 'category': 'market', 'lat': 32.0685509, 'lon': 34.7688024, 'blurb': ''}]}
+2026-06-30 19:12:38,976 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:12:38,979 INFO Final answer after 3 round(s).
+2026-06-30 19:12:52,933 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:12:52,937 INFO TOOL CALL order_walking_route args={'places': [{'name': 'שוק קוינסקי', 'category': 'market', 'lat': 32.05964, 'lon': 34.7726296, 'blurb': ''}, {'name': 'Plaine de jeux Rishonim street 10', 'category': 'kids', 'lat': 32.0625554, 'lon': 34.7676054, 'blurb': ''}, {'name': 'שוק הקרמל', 'category': 'market', 'lat': 32.0685509, 'lon': 34.7688024, 'blurb': ''}, {'name': 'נחלת בנימיני', 'category': 'market', 'lat': 32.0681548, 'lon': 34.7701742, 'blurb': ''}, {'name': 'Hotel & Cafe 65', 'category': 'cafe', 'lat': 32.0654131, 'lon': 34.7765181, 'blurb': ''}, {'name': 'שוק הישן', 'category': 'market', 'lat': 32.0613279, 'lon': 34.7739172, 'blurb': ''}]}
+2026-06-30 19:12:59,355 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:12:59,357 INFO Final answer after 3 round(s).
+2026-06-30 19:47:43,117 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:47:45,463 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:47:45,465 INFO TOOL CALL get_nearby_places args={'location': 'Smuel Hanagid 12 Herzliya', 'interests': ['cafe', 'kids', 'market']}
+2026-06-30 19:47:45,990 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Smuel Hanagid 12 Herzliya'
+2026-06-30 19:47:47,150 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:47:47,160 INFO TOOL CALL get_nearby_places args={'location': 'Herzliya, Israel', 'interests': ['cafe', 'kids', 'market']}
+2026-06-30 19:48:17,565 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:48:17,573 INFO TOOL CALL order_walking_route args={'places': [{'name': 'ארומה', 'category': 'cafe', 'lat': 32.1686209, 'lon': 34.8426919, 'blurb': ''}, {'name': 'Lounge Bar', 'category': 'cafe', 'lat': 32.1675466, 'lon': 34.8424911, 'blurb': ''}, {'name': 'לנדוור', 'category': 'cafe', 'lat': 32.1680443, 'lon': 34.8429363, 'blurb': ''}, {'name': 'גינת אלישע', 'category': 'kids', 'lat': 32.1617481, 'lon': 34.8478318, 'blurb': ''}, {'name': 'קופ קפה', 'category': 'cafe', 'lat': 32.1668702, 'lon': 34.8391082, 'blurb': ''}]}
+2026-06-30 19:48:23,553 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:48:23,570 INFO Final answer after 3 round(s).
+2026-06-30 19:50:13,515 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:50:19,401 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:50:19,413 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['bar', 'history', 'religion']}
+2026-06-30 19:50:50,328 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:50:50,332 INFO TOOL CALL order_walking_route args={'places': [{'name': 'כנסת ישראל', 'category': 'religion', 'lat': 32.061993, 'lon': 34.767717, 'blurb': ''}, {'name': 'ברקפא', 'category': 'bar', 'lat': 32.0627654, 'lon': 34.7698125, 'blurb': ''}, {'name': 'sputnik bar', 'category': 'bar', 'lat': 32.06283, 'lon': 34.772946, 'blurb': ''}, {'name': 'October Bar', 'category': 'bar', 'lat': 32.0647627, 'lon': 34.7748698, 'blurb': ''}, {'name': "Patrick's", 'category': 'bar', 'lat': 32.0640096, 'lon': 34.7740657, 'blurb': ''}, {'name': 'Beer Bazaar', 'category': 'bar', 'lat': 32.0685839, 'lon': 34.7681972, 'blurb': ''}]}
+2026-06-30 19:50:56,263 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:50:56,265 INFO Final answer after 2 round(s).
+2026-06-30 19:51:34,141 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:51:35,016 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:51:35,024 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['history', 'religion']}
+2026-06-30 19:52:43,273 ERROR Tool get_nearby_places: network/API failure after retry
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 64, in _with_retry
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 100, in get_nearby_places
+    data = _query_overpass(query)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 94, in _query_overpass
+    raise last_err
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 90, in _query_overpass
+    r.raise_for_status()
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 73, in _call_tool
+    places = _with_retry(tools.get_nearby_places, args["location"], args["interests"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/agent/agent.py", line 67, in _with_retry
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 100, in get_nearby_places
+    data = _query_overpass(query)
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 94, in _query_overpass
+    raise last_err
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/tools.py", line 90, in _query_overpass
+    r.raise_for_status()
+  File "/Users/efratklyman/Desktop/DS-TravelAi-main/.venv/lib/python3.11/site-packages/requests/models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https://overpass-api.de/api/interpreter
+2026-06-30 19:52:44,617 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:52:44,619 INFO Final answer after 1 round(s).
+2026-06-30 19:53:03,942 INFO Duration 120 min -> target 6 stops
+2026-06-30 19:53:05,185 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:53:05,188 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 29, Tel Aviv', 'interests': ['history', 'religion']}
+2026-06-30 19:53:34,809 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:53:34,818 INFO TOOL CALL order_walking_route args={'places': [{'name': 'קול יהודה', 'category': 'religion', 'lat': 32.061993, 'lon': 34.767717, 'blurb': ''}, {'name': 'Meir Dizengoff', 'category': 'history', 'lat': 32.0629711, 'lon': 34.7709366, 'blurb': ''}, {'name': 'האנדרטה למייסדי העיר תל אביב', 'category': 'history', 'lat': 32.063062, 'lon': 34.771298, 'blurb': ''}, {'name': 'בית הכנסת אליהו הנביא', 'category': 'religion', 'lat': 32.059521, 'lon': 34.7726947, 'blurb': ''}, {'name': 'בית הכנסת', 'category': 'religion', 'lat': 32.0657623, 'lon': 34.7721747, 'blurb': ''}, {'name': 'בית הספר אחד העם', 'category': 'history', 'lat': 32.0651329, 'lon': 34.7747389, 'blurb': ''}]}
+2026-06-30 19:53:40,982 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 19:53:40,989 INFO Final answer after 2 round(s).

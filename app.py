@@ -65,6 +65,55 @@ def call_agent(location, interests, note=""):
 # Page + session state
 # ---------------------------------------------------------------------------
 st.set_page_config(page_title="Walking-Tour Guide", page_icon="🚶")
+
+# A pretty-city photo for the background. Swap this URL for any image you like
+# (or a different city). The purple→turquoise gradient sits on top and also acts
+# as the fallback if the photo ever fails to load.
+CITY_IMAGE_URL = "https://images.unsplash.com/photo-1562351768-f68650f3ec54?auto=format&fit=crop&w=1600&q=70"
+
+# Strength of the purple→turquoise wash over the photo: 0.0 = photo only,
+# 1.0 = solid color. Lower it to let the city picture show through more.
+TINT_ALPHA = 0.4
+
+st.markdown(f"""
+<style>
+/* ---- background: purple→turquoise tint over a city photo ---- */
+.stApp {{
+    background:
+        linear-gradient(135deg, rgba(124,58,237,{TINT_ALPHA}), rgba(20,184,166,{TINT_ALPHA})),
+        url('{CITY_IMAGE_URL}') center/cover fixed no-repeat;
+}}
+
+/* ---- readable content card floating over the photo ---- */
+.stMainBlockContainer, .block-container {{
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 20px;
+    padding: 2rem 2.5rem 2.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 12px 45px rgba(76, 29, 149, 0.35);
+}}
+
+/* ---- headings in purple ---- */
+h1, h2, h3 {{ color: #5B21B6 !important; }}
+
+/* ---- buttons: UPPERCASE, rounded, lively ---- */
+.stButton > button {{
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    border-radius: 12px;
+    border: none;
+    transition: filter 0.15s ease, transform 0.05s ease;
+}}
+.stButton > button:hover {{ filter: brightness(1.08); transform: translateY(-1px); }}
+
+/* interest + refine buttons (secondary) -> turquoise */
+.stButton > button[kind="secondary"] {{ background: #14B8A6; color: #ffffff; }}
+/* the Build button (primary) -> purple */
+.stButton > button[kind="primary"] {{ background: #7C3AED; color: #ffffff; }}
+</style>
+""", unsafe_allow_html=True)
+
 st.title("🚶 Walking-Tour Guide")
 st.caption("Type a starting address, tap a few interests, and get a walkable tour.")
 

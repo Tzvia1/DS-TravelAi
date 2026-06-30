@@ -3,7 +3,9 @@ from dataclasses import dataclass
 
 # The interest buttons in the UI map exactly to these category keys.
 INTERESTS = ["architecture", "art", "music", "history",
-             "food", "cafe", "museum", "nature"]
+             "food", "cafe", "museum", "nature",
+             "beach", "bar", "theater", "viewpoint",
+             "market", "cinema", "religion", "kids"]
 
 
 @dataclass
