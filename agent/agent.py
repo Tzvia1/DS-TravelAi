@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 import time
 
 import requests
@@ -7,7 +8,7 @@ from dotenv import load_dotenv
 from openai import OpenAI, OpenAIError
 
 import tools
-from models.contracts import Place
+from models.contracts import Place, minutes_to_stops
 
 from .prompts import SYSTEM_PROMPT
 
@@ -104,12 +105,19 @@ def run_agent(location, interests, user_note=""):
         log.info("Rejected by validate_request: %s", msg)
         return json.dumps({"intro": msg, "stops": []})
 
+    # The UI sends the chosen duration inside the note ("...60 minutes...").
+    # Turn it into an explicit stop target so the model doesn't have to guess.
+    content = f"Address: {location}\nInterests: {interests}\nExtra request: {user_note or 'none'}"
+    m = re.search(r"(\d+)\s*min", user_note or "")
+    if m:
+        minutes = int(m.group(1))
+        target = minutes_to_stops(minutes)
+        content += f"\nTarget length: about {target} stops (~{minutes} minutes of walking)."
+        log.info("Duration %s min -> target %s stops", minutes, target)
+
     messages = [
         {"role": "system", "content": SYSTEM_PROMPT},
-        {
-            "role": "user",
-            "content": f"Address: {location}\nInterests: {interests}\nExtra request: {user_note or 'none'}",
-        },
+        {"role": "user", "content": content},
     ]
 
     for round_num in range(MAX_ROUNDS):

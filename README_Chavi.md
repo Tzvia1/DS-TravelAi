@@ -38,9 +38,10 @@ Edit the `ADDRESS` / `INTERESTS` / `NOTE` variables at the top of
 tool call the model made and why.
 
 ## What works
-- `run_agent(...)` calls `get_nearby_places` then `order_walking_route` and returns valid JSON with 4–6 real stops for the demo scenario.
+- `run_agent(...)` calls `get_nearby_places` then `order_walking_route` and returns valid JSON with real stops for the demo scenario.
 - `agent.log` records every tool call, its arguments, and the final decision.
 - The system prompt is city-agnostic — it narrates wherever the address geocodes to, not just Tel Aviv.
+- **Duration-aware:** when Efrat's UI passes a duration in the note, `run_agent` parses it and injects an explicit stop target (via the shared `minutes_to_stops` in `models/contracts.py`: 4 stops up to an hour, up to 6 for longer walks); with no duration it defaults to 4–6 stops.
 
 ## Error handling (the bonus)
 | Case | Behavior |
