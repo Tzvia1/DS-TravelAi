@@ -86,11 +86,11 @@ def _query_overpass(query):
     last_err = None
     for url in OVERPASS_ENDPOINTS:
         try:
-            r = requests.post(url, data={"data": query}, headers=HEADERS, timeout=25)
+            r = requests.post(url, data={"data": query}, headers=HEADERS, timeout=25, verify=False)
             r.raise_for_status()
             return r.json()
         except requests.exceptions.RequestException as e:
-            last_err = e  # endpoint slow/down — try the next one
+            last_err = e
     raise last_err
 
 
@@ -105,7 +105,6 @@ def get_nearby_places(location, interests, radius_m=800, limit=12):
         name = tags.get("name")
         if not name:
             continue
-        # ways/relations return center coords; nodes return lat/lon directly
         plat = el.get("lat") or el.get("center", {}).get("lat")
         plon = el.get("lon") or el.get("center", {}).get("lon")
         if plat is None or plon is None:
@@ -121,7 +120,18 @@ def get_nearby_places(location, interests, radius_m=800, limit=12):
         if p.name not in seen:
             seen.add(p.name)
             unique.append(p)
-    return unique[:limit]
+
+    # Keep at most 2 results per category so the tour stays varied
+    from collections import defaultdict
+    per_cat = defaultdict(list)
+    for p in unique:
+        per_cat[p.category].append(p)
+
+    balanced = []
+    for cat in interests:
+        balanced.extend(per_cat.get(cat, [])[:1])
+
+    return balanced[:limit]
 
 
 def _haversine(a_lat, a_lon, b_lat, b_lon):
