@@ -25,6 +25,12 @@ import os
 
 import streamlit as st
 
+# Streamlit Cloud only exposes secrets via st.secrets, not os.environ, but
+# agent.py reads the key with os.getenv() (for local .env compatibility).
+# Bridge the two so the same code works in both places.
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ.setdefault("OPENAI_API_KEY", st.secrets["OPENAI_API_KEY"])
+
 from models.contracts import INTERESTS
 from app_logic import compose_note, fake_agent, parse_tour, valid_coord
 

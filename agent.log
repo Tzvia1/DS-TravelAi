@@ -416,3 +416,59 @@ requests.exceptions.HTTPError: 504 Server Error: Gateway Timeout for url: https:
 2026-06-30 19:53:34,818 INFO TOOL CALL order_walking_route args={'places': [{'name': 'קול יהודה', 'category': 'religion', 'lat': 32.061993, 'lon': 34.767717, 'blurb': ''}, {'name': 'Meir Dizengoff', 'category': 'history', 'lat': 32.0629711, 'lon': 34.7709366, 'blurb': ''}, {'name': 'האנדרטה למייסדי העיר תל אביב', 'category': 'history', 'lat': 32.063062, 'lon': 34.771298, 'blurb': ''}, {'name': 'בית הכנסת אליהו הנביא', 'category': 'religion', 'lat': 32.059521, 'lon': 34.7726947, 'blurb': ''}, {'name': 'בית הכנסת', 'category': 'religion', 'lat': 32.0657623, 'lon': 34.7721747, 'blurb': ''}, {'name': 'בית הספר אחד העם', 'category': 'history', 'lat': 32.0651329, 'lon': 34.7747389, 'blurb': ''}]}
 2026-06-30 19:53:40,982 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2026-06-30 19:53:40,989 INFO Final answer after 2 round(s).
+2026-06-30 21:26:06,685 INFO Duration 60 min -> target 4 stops
+2026-06-30 21:26:11,307 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 21:26:11,347 INFO TOOL CALL get_nearby_places args={'location': 'Anilevitch 70 Bney Brak', 'interests': ['architecture', 'cafe', 'religion']}
+2026-06-30 21:26:12,180 WARNING Tool get_nearby_places rejected input: Could not locate address: 'Anilevitch 70 Bney Brak'
+2026-06-30 21:26:14,393 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 21:26:14,397 INFO TOOL CALL get_nearby_places args={'location': 'Bney Brak, Israel', 'interests': ['architecture', 'cafe', 'religion']}
+2026-06-30 21:26:50,414 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 21:26:50,419 INFO TOOL CALL order_walking_route args={'places': [{'name': '�����', 'category': 'cafe', 'lat': 32.1085713, 'lon': 34.8386958}, {'name': '���� �� ���', 'category': 'architecture', 'lat': 32.1029095, 'lon': 34.8359505}, {'name': '���� �����', 'category': 'architecture', 'lat': 32.1081002, 'lon': 34.8359174}, {'name': '�����', 'category': 'cafe', 'lat': 32.1093797, 'lon': 34.8400726}]}
+2026-06-30 21:26:57,833 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 21:26:57,836 INFO Final answer after 3 round(s).
+2026-06-30 22:38:10,985 INFO Duration 90 min -> target 5 stops
+2026-06-30 22:38:13,410 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 22:38:13,427 INFO TOOL CALL get_nearby_places args={'location': 'Allenby 52, Tel Aviv', 'interests': ['architecture', 'art', 'cafe', 'music', 'religion']}
+2026-06-30 22:38:50,330 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 22:38:56,224 INFO HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-30 22:38:56,226 INFO Final answer after 2 round(s).
+2026-07-01 07:43:10,078 ERROR Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-07-01 07:43:11,791 ERROR Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-07-01 09:28:58,834 ERROR Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-07-01 16:54:06,544 ERROR Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2026-07-01 21:26:20,056 ERROR Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\tzvia\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
